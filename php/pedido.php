@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encomendas</title>
-    <script src="javascript/adesivos.js" defer></script>    
-    <link rel="stylesheet" href="css/encomendas.css">
+    <link rel="stylesheet" href="../css/encomendas.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="website icon" type="png" href="icon/carrinho.png">
-    <link rel="stylesheet" href="css/cabecalho.css">
-    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="website icon" type="png" href="../icon/carrinho.png">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/rodape.css">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-            <img src="fotos/logo.jpeg" alt="Adesivos" class="img_logo_header">
+            <img src="../fotos/logo.jpeg" alt="Adesivos" class="img_logo_header">
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Pesquisar...">
             <button type="submit">Buscar</button>
         </div>
         <div class="brand-name">
-            <a href="encomendas.html">
+            <a href="encomendas.php">
                 <i class='bx bx-cart cart-icon'></i>
             </a>
         </div>
     </header>
     <div class="sub-header">
         <ul class="sub-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="adesivos.html">Figurinhas</a></li>
-            <li><a href="desenhos.html">Desenhos</a></li>
-            <li><a href="perfil.html">Meu Perfil</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../adesivos.html">Figurinhas</a></li>
+            <li><a href="../desenhos.html">Desenhos</a></li>
+            <li><a href="../perfil.html">Meu Perfil</a></li>
         </ul>
     </div>
     <main>
         <div class="container">
             <h1>Encomenda de Adesivos ou Desenhos</h1>
             <p>Por favor, preencha o formulário abaixo para fazer sua encomenda.</p>
-            <form id="encomendaForm">
+
+            <form  method="POST" action="controle.php" id="encomendaForm">
                 <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                 <input type="tel" id="telefone" name="telefone" placeholder="Seu número de contato" required>
-                <select id="tipoEncomenda" name="tipoEncomenda" required>
+                <select id="tipoEncomenda" name="encomenda" required>
                     <option value="">Selecione o tipo de encomenda</option>
                     <option value="desenho">Desenho</option>
                     <option value="figurinha">Figurinha</option>
@@ -57,7 +57,7 @@
                 </select>
                 <textarea id="conteudo" name="conteudo" placeholder="Conteúdo do desenho" rows="4" required maxlength="2000"></textarea>
     
-                <input type="submit" value="Enviar Encomenda">
+                 <p><input type="submit" name="crud" value="cadastrar"></p>
             </form>
        </div>
     </main>
